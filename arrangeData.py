@@ -126,7 +126,7 @@ def readDataSameDay(files, cates):
 
 def calMean(datas, cate):
     """
-    给定一天的数据量，计算其中一个类别的货币外汇的各点的后续均值。最后添加回该天数据中
+    给定一天的数据量，计算其中一个类别的货币外汇的各点的后续均值是否大于当前值（若小于则返回0，反之，返回1）。最后添加回该天数据中
     :param datas: 
     :param cate: 
     :return: 
@@ -134,7 +134,7 @@ def calMean(datas, cate):
     for data in datas:
         # print(data.dtypes)
         s = data[cate].sum()
-        print(s)
+        # print(s)
         l = len(data[cate])
         nl = []
         for x in data[cate]:
